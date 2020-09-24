@@ -1,6 +1,8 @@
-// 22.09
+// 24.09
 #pragma once
 #include <vector>
+#include <iostream>
+#include <algorithm>
 
 class Set {
 
@@ -18,80 +20,47 @@ public:
 
 	Set Union(const Set& variety) const {
 		// {1, 2, 3, 4} \/ {5, 6, 7} = {1, 2, 3, 4, 5, 6, 7}
-		std::vector<int64_t> first_variety = variety.Data();
-		std::vector<int64_t> second_variety = this->Data();
-		std::vector<int64_t> final_variety;
-		std::vector<int> counts = { 0,0,0,0,0,0,0 };
-
-		for (auto number : first_variety) {
-			counts[number-1]++;
-		}
-
-		for (auto number : second_variety) {
-			counts[number-1]++;
-		}
-
-		for (auto number : counts) {
-			if (counts[number] == 1) {
-				final_variety.push_back(number);
-			}
-		}
-
-		return final_variety;
+		
 	}
 
 	Set Intersection(const Set& variety) const {
 		// {1, 2, 3, 4} /\ {3, 5, 7} = {3}
-		std::vector<int64_t> first_variety = variety.Data();
-		std::vector<int64_t> second_variety = this->Data();
-		std::vector<int64_t> final_variety;
-		std::vector<int> counts = { 0,0,0,0,0,0,0 };
-
-		for (auto number : first_variety) {
-			counts[number - 1]++;
-		}
-		for (auto number : second_variety) {
-			counts[number - 1]++;
-		}
-
-		for (auto number : counts) {
-			if (counts[number] == 2) {
-				final_variety.push_back(number);
-			}
-		}
-
-		return final_variety;
+		
 	}
 
 	Set Difference(const Set& variety) const {
 		// {1, 2, 3, 4} \ {3, 4, 5} = {1, 2}
-		std::vector<int64_t> first_variety = variety.Data();
-		std::vector<int64_t> second_variety = this->Data();
-		std::vector<int64_t> final_variety;
-
-		return final_variety;
+		
 	}
 
 	Set SymmetricDifference(const Set& variety) const {
 		// {1, 2, 3, 4} s\ {3, 4, 5} = {1, 2, 5}
-		std::vector<int64_t> first_variety = variety.Data();
-		std::vector<int64_t> second_variety = this->Data();
-		std::vector<int64_t> final_variety;
-
-		return final_variety;
+	
 	}
 
-
 	void Add(int64_t num) {
-		// {1, 1, 1, 1} + {2, 3, 3} = {1, 2, 3}
+		if (!Contains(num)) {
+			data.push_back(num);
+			Sort();
+		}
 	}
 
 	void Remove(int64_t num) {
-		// {1, 2, 3, 4} - {1, 2, 3} = {4}
-	}
+		if (Contains(num)) {
+			data.erase(std::find(data.begin(), data.end(), num));
+			Sort();
+		}
+ 	}
 
 	bool Contains(int64_t num) const {
-		// {1, 2, 3, 4} ? {3, 4, 5} = {1, 2, 3, 4, 9, 16}
+		if (std::find(data.begin(), data.end(), num) != data.end())
+			return true;
+		else
+			return false;
+	}
+
+	void Sort() {
+		std::sort(data.begin(), data.end());
 	}
 
 	std::vector<int64_t> Data() const {
