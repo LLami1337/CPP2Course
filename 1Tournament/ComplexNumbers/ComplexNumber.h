@@ -3,6 +3,7 @@
 //
 #pragma once
 #include <ostream>
+#include "RationalNumber.h"
 
 class ComplexNumber {
 private:
@@ -10,11 +11,11 @@ private:
 	double im;
 public:
 	ComplexNumber();
-	ComplexNumber(double re, double im);
+	ComplexNumber(RationalNumber re, RationalNumber im);
 	double GetReal();
-	void SetReal(double re);
+	void SetReal(RationalNumber re);
 	double GetImaginable();
-	void SetImaginable(double im);
+	void SetImaginable(RationalNumber im);
 	ComplexNumber operator+(const ComplexNumber& other);
 	ComplexNumber operator-(const ComplexNumber& other);
 	ComplexNumber operator*(const ComplexNumber& other);
@@ -28,8 +29,7 @@ public:
 	ComplexNumber& operator/=(ComplexNumber other);
 	friend const ComplexNumber operator-(const ComplexNumber& other);
 	friend std::ostream& operator<<(std::ostream& out, const ComplexNumber complexNumber);
-	double arg();
-	double abs();
+	RationalNumber arg();
+	RationalNumber abs();
 	ComplexNumber pow(int n);
-	
 };

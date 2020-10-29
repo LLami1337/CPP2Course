@@ -1,9 +1,11 @@
 ﻿#include <iostream>
 #include "ComplexNumber.h"
+#include "RationalNumber.h"
 
 int main()
 {
-    ComplexNumber a(5, 10);
-    ComplexNumber c(-1,-1);
-    std::cout<<a.pow(3);
+    RationalNumber first(2.0, 4.5);
+    RationalNumber second(1, 6);
+    ComplexNumber mynum(first, second);
+    std::cout<<mynum.pow(3);
 }

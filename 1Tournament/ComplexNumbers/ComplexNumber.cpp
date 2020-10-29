@@ -14,7 +14,7 @@ ComplexNumber::ComplexNumber() {
 	SetImaginable(0);
 }
 
-ComplexNumber::ComplexNumber(double re, double im) {
+ComplexNumber::ComplexNumber(RationalNumber re, RationalNumber im) {
 	SetReal(re);
 	SetImaginable(im);
 }
@@ -22,14 +22,14 @@ ComplexNumber::ComplexNumber(double re, double im) {
 double ComplexNumber::GetReal() {
 	return this->re;
 }
-void ComplexNumber::SetReal(double re) {
-	this->re = re;
+void ComplexNumber::SetReal(RationalNumber re) {
+	this->re = re.toDouble();
 }
 double ComplexNumber::GetImaginable() {
 	return this->im;
 }
-void ComplexNumber::SetImaginable(double im) {
-	this->im = im;
+void ComplexNumber::SetImaginable(RationalNumber im) {
+	this->im = im.toDouble();
 }
 
 ComplexNumber ComplexNumber::operator+(const ComplexNumber& other) {
@@ -49,7 +49,7 @@ ComplexNumber ComplexNumber::operator*(const ComplexNumber& other) {
 	final.re = (((this->re) * (other.re)) - ((this->im) * (other.im)));
 	final.im = (((this->re) * (other.im)) + ((this->im) * (other.re)));
 	return final;
-}
+}	
 
 ComplexNumber ComplexNumber::operator/(const ComplexNumber& other) {
 	ComplexNumber final;
@@ -105,7 +105,7 @@ const ComplexNumber operator-(const ComplexNumber& other)
 	return temp;
 }
 
-double ComplexNumber::arg()
+RationalNumber ComplexNumber::arg()
 {
 	if ((this->re == 0.0) && (this->im == 0.0)) return 0.0;
 	if (this->re == 0.0) {
@@ -120,7 +120,7 @@ double ComplexNumber::arg()
 		}
 }
 
-double ComplexNumber::abs()
+RationalNumber ComplexNumber::abs()
 {
 	return sqrt(this->re * this->re + this->im * this->im);
 }
@@ -128,12 +128,12 @@ double ComplexNumber::abs()
 ComplexNumber ComplexNumber::pow(int n)
 {	// z^n = r^n(cosn*Fi+sinn*Fi)
 	static ComplexNumber final;
-	final.re = (std::pow(abs(), n)) * (std::cos(n * arg()));
-	final.im = (std::pow(abs(), n)) * (std::sin(n * arg()));
+	final.re = (std::pow(abs().toDouble(), n)) * (std::cos(n * arg().toDouble()));
+	final.im = (std::pow(abs().toDouble(), n)) * (std::sin(n * arg().toDouble()));
 	return final;
 }
 
-
+	
 std::ostream& operator<<(std::ostream& out, ComplexNumber complexNumber) {
 	if (complexNumber.im >= 0) {
 		out << "ComplexNumber: " << complexNumber.GetReal() << " + " << complexNumber.GetImaginable() << "*i";
