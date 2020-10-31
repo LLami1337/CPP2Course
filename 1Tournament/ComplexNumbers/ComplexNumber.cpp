@@ -9,6 +9,8 @@
 #define M_PI 3.14159265358979323846
 #endif
 
+RationalNumber minus(-1);
+
 ComplexNumber::ComplexNumber() {
 	SetReal(0);
 	SetImaginable(0);
@@ -19,28 +21,28 @@ ComplexNumber::ComplexNumber(RationalNumber re, RationalNumber im) {
 	SetImaginable(im);
 }
 
-double ComplexNumber::GetReal() {
+RationalNumber ComplexNumber::GetReal() {
 	return this->re;
 }
 void ComplexNumber::SetReal(RationalNumber re) {
-	this->re = re.toDouble();
+	this->re = re;
 }
-double ComplexNumber::GetImaginable() {
+RationalNumber ComplexNumber::GetImaginable() {
 	return this->im;
 }
 void ComplexNumber::SetImaginable(RationalNumber im) {
-	this->im = im.toDouble();
+	this->im = im;
 }
 
 ComplexNumber ComplexNumber::operator+(const ComplexNumber& other) {
-	this->re += other.re;
-	this->im += other.im;
+	this->re = this->re + other.re;
+	this->im = this->im + other.im;
 	return *this;
 }
 
 ComplexNumber ComplexNumber::operator-(const ComplexNumber& other) {
-	this->re -= other.re;
-	this->im -= other.im;
+	this->re = this->re - other.re;
+	this->im = this->im - other.im;
 	return *this;
 }
 
@@ -51,7 +53,7 @@ ComplexNumber ComplexNumber::operator*(const ComplexNumber& other) {
 	return final;
 }	
 
-ComplexNumber ComplexNumber::operator/(const ComplexNumber& other) {
+ComplexNumber ComplexNumber::operator/(ComplexNumber& other) {
 	ComplexNumber final;
 	final.re = (this->re*other.re+this->im*other.im) / (other.re*other.re+other.im*other.im);
 	final.im = (this->im*other.re-this->re*other.im) / (other.re*other.re+other.im*other.im);
@@ -100,8 +102,8 @@ ComplexNumber& ComplexNumber::operator/=(ComplexNumber other) {
 const ComplexNumber operator-(const ComplexNumber& other)
 {
 	static ComplexNumber temp = other;
-	temp.re *= -1;
-	temp.im *= -1;
+	temp.re = minus * temp.re;
+	temp.im = minus * temp.im;
 	return temp;
 }
 
@@ -112,17 +114,17 @@ RationalNumber ComplexNumber::arg()
 		if (this->im > 0) return M_PI / 2; else return -M_PI / 2;
 	}
 	else
-		if (this->re > 0.0) return atan(this->im / this->re);
+		if (this->re > 0.0) return atan((this->im / this->re).toDouble());
 		else
 		{
-			if (this->im >= 0) return M_PI + atan(this->im/this->re);
-			else return -M_PI + atan(this->im /this->re);
+			if (this->im >= 0) return M_PI + atan((this->im/this->re).toDouble());
+			else return -M_PI + atan((this->im/this->re).toDouble());
 		}
 }
 
 RationalNumber ComplexNumber::abs()
 {
-	return sqrt(this->re * this->re + this->im * this->im);
+	return sqrt((this->re * this->re + this->im * this->im).toDouble());
 }
 
 ComplexNumber ComplexNumber::pow(int n)
@@ -139,7 +141,7 @@ std::ostream& operator<<(std::ostream& out, ComplexNumber complexNumber) {
 		out << "ComplexNumber: " << complexNumber.GetReal() << " + " << complexNumber.GetImaginable() << "*i";
 	}
 	else {
-		out << "ComplexNumber: " << complexNumber.GetReal() << " - " << -complexNumber.GetImaginable() << "*i";
+		out << "ComplexNumber: " << complexNumber.GetReal() << " - " << minus * complexNumber.GetImaginable() << "*i";
 	}
 	return out;
 }

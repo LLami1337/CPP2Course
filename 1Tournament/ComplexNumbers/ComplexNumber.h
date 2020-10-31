@@ -7,19 +7,19 @@
 
 class ComplexNumber {
 private:
-	double re;
-	double im;
+	RationalNumber re;
+	RationalNumber im;
 public:
 	ComplexNumber();
 	ComplexNumber(RationalNumber re, RationalNumber im);
-	double GetReal();
+	RationalNumber GetReal();
 	void SetReal(RationalNumber re);
-	double GetImaginable();
+	RationalNumber GetImaginable();
 	void SetImaginable(RationalNumber im);
 	ComplexNumber operator+(const ComplexNumber& other);
 	ComplexNumber operator-(const ComplexNumber& other);
 	ComplexNumber operator*(const ComplexNumber& other);
-	ComplexNumber operator/(const ComplexNumber& other);
+	ComplexNumber operator/(ComplexNumber& other);
 	ComplexNumber& operator=(const ComplexNumber& other);
 	friend bool operator==(const ComplexNumber& first, const ComplexNumber& second);
 	friend bool operator!=(const ComplexNumber& first, const ComplexNumber& second);
