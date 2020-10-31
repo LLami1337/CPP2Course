@@ -1,0 +1,19 @@
+[2020-10-31 12:05:05] [info] Start Program:
+Path:"A:\\DOCUMENTS\\PROGS\\CPP\\1TOUR\\ComplexNumbers\\Debug\\ComplexNumbers.exe"
+Arguments:
+Working directory: "A:\\DOCUMENTS\\PROGS\\CPP\\1TOUR\\ComplexNumbers\\ComplexNumbers\\"
+Modules: Selected: A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\Debug\ComplexNumbers.exe Excluded: 
+Sources: Selected: A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\РњР°РєСЃРёРј\AppData\Local\Temp\4zwupnlb.pi1 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2020-10-31 12:05:05] [info] Module: A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\Debug\ComplexNumbers.exe is selected because it matches selected pattern: A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\Debug\ComplexNumbers.exe
+[2020-10-31 12:05:06] [error] Error: tool.cpp:237 Error when creating folder C:\Users\ÐÐ°ÐºÑÐ¸Ð¼\AppData\Local\Temp Error code:5

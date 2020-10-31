@@ -1,0 +1,32 @@
+﻿  ComplexNumber.cpp
+  ComplexNumber_test.cpp
+  RationalNumber.cpp
+  Компиляция...
+  Создание кода...
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\RationalNumber.cpp(55): warning C4715: RationalNumber::toDouble: значение возвращается не при всех путях выполнения
+  ComplexNumbers.vcxproj -> A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\Debug\ComplexNumbers.exe
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4000): warning C26451: Арифметическое переполнение: использование оператора "*" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора "*", чтобы избежать переполнения (io.2).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4102): warning C26812: Тип перечисления "Catch::ResultDisposition::Flags" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4123): warning C26812: Тип перечисления "Catch::ResultWas::OfType" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4844): warning C26812: Тип перечисления "Catch::clara::detail::ResultBase::Type" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(5714): warning C26812: Тип перечисления "Catch::ShowDurations::OrNot" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(5819): warning C26812: Тип перечисления "Catch::WarnAbout::What" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(5931): warning C26812: Тип перечисления "Catch::Colour::Code" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(6775): warning C26812: Тип перечисления "Catch::TestCaseInfo::SpecialProperties" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(7081): warning C26812: Тип перечисления "Catch::CaseSensitive::Choice" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(7678): warning C26495: Переменная "Catch::RunContext::m_testCaseTracker" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(3856): warning C26812: Тип перечисления "Catch::TestCaseTracking::TrackerContext::RunState" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(8569): warning C26495: Переменная "Catch::StringRef::m_start" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(3896): warning C26812: Тип перечисления "Catch::TestCaseTracking::TrackerBase::CycleState" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(9240): warning C26816: Указатель указывает на память, выделенную в стеке.
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(9287): warning C26816: Указатель указывает на память, выделенную в стеке.
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(2798): warning C26812: Тип перечисления "Catch::TestSpecParser::Mode" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(9561): warning C26812: Тип перечисления "Catch::Detail::?A0x5d8bbecc::Endianness::Arch" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(2706): warning C26812: Тип перечисления "Catch::WildcardPattern::WildcardPosition" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(9977): warning C26812: Тип перечисления "Catch::XmlEncode::ForWhat" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(10601): warning C26812: Тип перечисления "Catch::?A0x5d8bbecc::ColumnInfo::Justification" не входит в область. Старайтесь использовать "enum class" вместо "enum" (Enum.3).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(3136): warning C26495: Переменная "Catch::Option<Catch::AssertionResult>::storage" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4863): warning C26495: Переменная "Catch::clara::detail::ResultValueBase<Catch::clara::detail::ParseState>::<unnamed-tag>::m_value" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4861): warning C26495: Переменная "Catch::clara::detail::ResultValueBase<Catch::clara::detail::ParseState>::<unnamed-tag>::m_value" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(4754): warning C26495: Переменная "Catch::clara::detail::Token::type" не инициализирована. Всегда инициализируйте переменную-член (type.6).
+A:\DOCUMENTS\PROGS\CPP\1TOUR\ComplexNumbers\ComplexNumbers\catch.hpp(3252): warning C26439: Эта функция не может "throw". Объявите ее как "noexcept" (f.6).
